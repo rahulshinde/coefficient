@@ -1,0 +1,54 @@
+body{
+  margin: 0;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 300vh;
+  opacity: 0;
+  transition:opacity ease 0.5s;
+}
+
+.show{
+  opacity: 1;
+}
+
+::-webkit-scrollbar { 
+  width: 0 !important
+}
+
+#heading{
+  margin: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-decoration: none;
+}
+
+h1{
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #000;
+  font-style: normal;
+  font-family: 'Helvetica', sans-serif;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+.vertical{
+  font-size: 5vw;
+}
+
+.horizontal{
+  font-size: 5vw;
+}
