@@ -1,4 +1,4 @@
-body{
+main{
   margin: 0;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
@@ -9,17 +9,20 @@ body{
   left: 0;
   right: 0;
   bottom: 0;
-  height: 300vh;
   opacity: 0;
   transition:opacity ease 0.5s;
 }
 
-.show{
+.show main{
   opacity: 1;
 }
 
 ::-webkit-scrollbar { 
   width: 0 !important
+}
+
+#sizer{
+  height: 300vh;
 }
 
 #heading{

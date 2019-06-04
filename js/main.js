@@ -1,7 +1,7 @@
 $(document).ready(function(){
-  height = parseInt($(document).height() - $(window).height());
+  height = parseInt($('#sizer').innerHeight() - $(window).height());
   width = parseInt($(window).width());
-  site_document = $(document); 
+  site_document = $('#container'); 
   heading = $('#heading');
   site_document.on('scroll', blurHeading);
   $(window).on('resize', resizeHandler);
@@ -15,15 +15,13 @@ function fadeIn(){
 }
 
 function blurHeading(e){
-  var scroll_position = $(document).scrollTop();
+  var scroll_position = $('#container').scrollTop();
   if (scroll_position >= height){
-    $(document).scrollTop(0);
+    $('#container').scrollTop(0);
   }
   var blur_percentage = Math.abs(scroll_position/height - 0.5) * 40;
-  console.log(blur_percentage);
 
   heading.css('filter', 'blur(' + blur_percentage + 'px)');
-  console.log(heading.css('filter'));
 }
 
 function resizeHandler(){
